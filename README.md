@@ -44,15 +44,39 @@ Terminez l'opération en rechargeant la configuration du profil de l'utilisateur
 Désormais la commande "pear" est complètement accessible et utilisable.
 
 -------------
-### Installation de PEAR
-
--------------
 ### Installation de PHP CodeSniffer
 >**Note:**
 >Ici nous n'allons **pas installer la version la plus récente** de l'outil PHP CodeSniffer (3.x) mais car il subsiste quelques bugs qui ne sont pas encore corrigés, de ce fait **nous installerons la version 2.9**.
 
 -------------
 ### Installation de PHP Mess Detector
+Dans un terminal, ajoutez les channels phpmd et pdepend :
+```
+// Ajouter les channels phpmd et pdepend
+# sudo pear channel-discover pear.phpmd.org
+# sudo pear channel-discover pear.pdepend.org
+```
+On regarde les paquets disponibles pour ces channels :
+```
+// Rechercher les paquets disponibles pour phpmd et pdepend
+# pear remote-list -c phpmd
+# pear remote-list -c pdepend
+```
+Télécharger PHP Mess Detector et ses dépendances :
+```
+// Installer PHP Mess Detector et ses dépendances
+# sudo pear install pdepend/PHP_Depend
+# sudo pear install phpmd/PHP_PMD
+```
+Vérification que l’installation c’est bien déroulée :
+```
+// Vérification de l'installation de PHP Mess Detector
+# phpmd --version
+// Vérification de l'installation de PHP Depend
+# pdepend --version
+```
+>**Note:**
+> De base PHP Mess Detector fonctionne avec ses listes de règles de codage, mais on peut éditer nos propres règles dans des fichiers via des générateurs en ligne : http://edorian.github.io/php-coding-standard-generator/#phpmd
 
 -------------
 ### Installation de Xdebug
