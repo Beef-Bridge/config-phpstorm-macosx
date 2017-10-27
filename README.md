@@ -8,6 +8,8 @@ Ce document décrit la procédure de configuration d'un environnement sur **MacO
 
 ----------
 ### Installation de PhpStorm
+Téléchargez l'IDE PhpStorm depuis l'url suivante : https://www.jetbrains.com/phpstorm/download/#section=mac-version
+Installez le logiciel sur votre Mac.
 
 -------------
 ### Installation de PEAR
