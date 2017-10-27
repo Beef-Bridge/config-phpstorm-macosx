@@ -11,6 +11,38 @@ Ce document décrit la procédure de configuration d'un environnement sur **MacO
 Téléchargez l'IDE PhpStorm depuis l'url suivante : https://www.jetbrains.com/phpstorm/download/#section=mac-version
 Installez le logiciel sur votre Mac.
 
+----------
+### Installation de PEAR
+Dans un terminal, lancez la commande pour savoir si PEAR est déjà installé :
+```
+// Tester si PEAR est déjà installé
+# pear version
+```
+S'il n'y a aucun résultat à cette commande :
+```
+// Télécharger le fichier .phar de PEAR
+# curl -O  http://pear.php.net/go-pear.phar
+# php -d detect_unicode=0 go-pear.phar
+```
+Appuyez **deux fois** sur la touche “*Entrée*” une fois arrivé sur l’écran de choix d’installation.
+
+Après cela la première commande devrait retourner un résultat, confirmant son installation.
+Il ne reste plus qu'à ajouter cette commande au PATH du Mac :
+```
+// Se placer à la racine de son compte utilisateur
+# cd $HOME
+// Editer le fichier .bash_profile
+# sudo nano .bash_profile
+// Ajouter la commande "pear" en saisissant l'instruction suivante au path :
+export PATH="/Users/duduc/pear/bin:$PATH"
+```
+Terminez l'opération en rechargeant la configuration du profil de l'utilisateur par la commande suivante :
+```
+// Recharger la configuration du profile de l'utilisateur
+# source .bash_profile
+```
+Désormais la commande "pear" est complètement accessible et utilisable.
+
 -------------
 ### Installation de PEAR
 
