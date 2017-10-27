@@ -33,7 +33,7 @@ Il ne reste plus qu'à ajouter cette commande au PATH du Mac :
 # cd $HOME
 // Editer le fichier .bash_profile
 # sudo nano .bash_profile
-// Ajouter la commande "pear" en saisissant l'instruction suivante au path :
+// Ajouter la commande "pear" au path en saisissant l'instruction suivante :
 export PATH="/Users/duduc/pear/bin:$PATH"
 ```
 Terminez l'opération en rechargeant la configuration du profil de l'utilisateur par la commande suivante :
