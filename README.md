@@ -6,8 +6,6 @@ Ce document décrit la procédure de configuration d'un environnement sur **MacO
 > La procédure décrite ci-dessous est, au moment où ces lignes sont écrites, valides sur Mac OS X 10.11 (*El Capitan*).
 > Elle sera vérifiée et adaptée sur les versions ultérieures de l'OS dans les semaines à venir.
 
-Hey! I'm your first Markdown document in **StackEdit**[^stackedit]. Don't delete me, I'm very helpful! I can be recovered anyway in the **Utils** tab of the <i class="icon-cog"></i> **Settings** dialog.
-
 ----------
 ### Installation de PhpStorm
 
