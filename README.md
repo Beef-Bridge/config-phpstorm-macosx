@@ -1,6 +1,6 @@
 # Configurer PhpStorm sur MacOS
 
-Ce document décrit la procédure de configuration d'un environnement de développement sur **MacOS** afin d'utiliser correctement l'IDE **PhpStorm** ainsi que certains de ses outils (**PHP CodeSniffer,** **PHP Mess Detector**, etc.) pour des fichiers ou projets PHP.
+Ce document décrit la procédure de configuration d'un environnement de développement sur **MacOS** afin d'utiliser correctement l'IDE **PhpStorm** ainsi que certains de ses outils (**PHP CodeSniffer,** **PHP Mess Detector**, etc.) pour projets PHP basés sur le framework Syomfony.
 
 > **Note :**
 > La procédure décrite ci-dessous est, au moment où ces lignes sont écrites, valides sur Mac OS X 10.11 (*El Capitan*).
