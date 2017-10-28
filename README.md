@@ -13,12 +13,12 @@ Installez le logiciel sur votre Mac.
 
 ----------
 ### Installation de PEAR
-Dans un terminal, lancez la commande pour savoir si PEAR est déjà installé :
+Dans un terminal, lancez la commande suivante pour savoir si PEAR est déjà installé :
 ```
 // Tester si PEAR est déjà installé
 # pear version
 ```
-S'il n'y a aucun résultat à cette commande :
+S'il n'y a aucun résultat à cette dernière,  c'est que PEAR n'est pas installé dans ce cas lancez les instructions ci-dessous :
 ```
 // Télécharger le fichier .phar de PEAR
 # curl -O  http://pear.php.net/go-pear.phar
@@ -26,8 +26,8 @@ S'il n'y a aucun résultat à cette commande :
 ```
 Appuyez **deux fois** sur la touche “*Entrée*” une fois arrivé sur l’écran de choix d’installation.
 
-Après cela la première commande devrait retourner un résultat, confirmant son installation.
-Il ne reste plus qu'à ajouter cette commande au PATH du Mac :
+Après cela la première commande devrait retourner un résultat, confirmant ainsi son installation.
+Il ne reste plus qu'à l'ajouter au PATH du Mac :
 ```
 // Se placer à la racine de son compte utilisateur
 # cd $HOME
@@ -41,14 +41,14 @@ Terminez l'opération en rechargeant la configuration du profil de l'utilisateur
 // Recharger la configuration du profile de l'utilisateur
 # source .bash_profile
 ```
-Désormais la commande "pear" est complètement accessible et utilisable.
+Désormais la commande <code># pear</code> est complètement accessible et utilisable.
 
 
 
 -------------
 ### Installation de PHP CodeSniffer
 >**Note:**
->Ici nous n'allons **pas installer la version la plus récente** de l'outil PHP CodeSniffer (3.x) mais car il subsiste quelques bugs qui ne sont pas encore corrigés, de ce fait **nous installerons la version 2.9**.
+>Ici nous n'allons **pas installer la version la plus récente** de l'outil PHP CodeSniffer (3.x) car il subsiste quelques bugs qui ne sont pas encore corrigés, de ce fait **nous installerons la version 2.9**.
 
 Téléchargez les fichiers .phar des commandes PHP CodeSniffer :
 ```
@@ -59,26 +59,26 @@ php phpcs.phar -h
 php phpcbf.phar -h
 ```
 
-Installez de PHP CodeSniffer en version 2.9 (sans conflits) :
+Installez PHP CodeSniffer en version 2.9 :
 ```
 // Installer la version 2.9 de PHP CodeSniffer
 # pear install PHP_CodeSniffer-2.9.0
 ```
 
-Vérifiez l’installation de PHP CodeSniffer 2.9 :
+Vérifiez sa bonne installation :
 ```
 // Lister les paquets installés avec PEAR
 # pear list
 ```
-Cette commande doit afficher une liste de paquets dont ‘**PHP_CodeSniffer 2.9.0 stable’**.
+Cette commande doit afficher une liste de paquets dont ‘**PHP_CodeSniffer 2.9.0 stable’** confirmant ainsi son installation.
 
 > **Tip:** Pour désinstaller un paquet PEAR, il suffit d'utiliser la commande suivante avec le nom du paquet en question :
->  *# pear uninstall PHP_CodeSniffer-2.9.0*
+>  <code># pear uninstall PHP_CodeSniffer-2.9.0</code>
 
 #### Installer les règles de codage de Symfony 2
 Téléchargez manuellement les règles de codage de Symfony 2 depuis le depot Github suivant : https://github.com/djoos/Symfony-coding-standard/tree/2.x
 
-Créez l’arborescence des répertoires suivants depuis le finder :
+Créez l’arborescence des répertoires nécéssaire depuis le finder :
 ```
 /usr/share/php/php/CodeSniffer/Standards/
 ```
@@ -86,13 +86,13 @@ Créez l’arborescence des répertoires suivants depuis le finder :
 Placez le répertoire 'Symfony 2' des règles de codage de Symfony 2 téléchargées précédemment dans le répertoire créé ci-dessus.
 Normalement ce répertoire doit contenir : 
 
- - un répertoire Sniffs/ 
- - un répertoire Tests/ 
- - un fichier ruleset.xml
+ - un répertoire <code>Sniffs/</code>
+ - un répertoire <code>Tests/</code>
+ - un fichier <code>ruleset.xml</code>
 
-Ajoutez les règles de codage de Symfony 2 au path de PHP CodeSniffer :
+Ajoutez les règles de codage de Symfony 2 au PATH de PHP CodeSniffer :
 ```
-// Ajouter les standards Symfony 2 au path de PHP CodeSniffer
+// Ajouter les standards Symfony 2 au PATH de PHP CodeSniffer
 # phpcs --config-set installed_paths /usr/share/php/php/CodeSniffer/Standards
 ```
 
@@ -101,19 +101,19 @@ Vérifiez l’ajout de ces règles :
 // Vérifier l'ajout des standards Symfony 2
 # phpcs -i
 ```
-Cette commande doit retourner quelque chose dans ce genre : “The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz, Zend & **Symfony 2”**.
+Cette commande doit retourner quelque chose dans ce genre : “The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz, Zend & **Symfony 2”** confirmant ainsi son installation.
 
 > **Note :** 
 En exécutant la commande <code># phpcs</code>, il se peut que les warning ci-dessous apparaissent :
 <code>Warning: include_once(PHP/CodeSniffer/CLI.php): failed to open stream: No such file or directory in /usr/local/bin/phpcs on line 21</code>
 <code>Warning: include_once(): Failed opening 'PHP/CodeSniffer/CLI.php' for inclusion (include_path='.:') in /usr/local/bin/phpcs on line 21</code>
 <code>Fatal error: Class 'PHP_CodeSniffer_CLI' not found in /usr/local/bin/phpcs on line 24</code>
-Pour les résoudre exécutez les instructions suivantes :
+<br>Pour les résoudre exécutez les instructions suivantes :
  <code># sudo mkdir -p /Library/Server/Web/Config/php</code>
  <code># sudo touch /Library/Server/Web/Config/php/local.ini</code>
  <code># echo 'include_path = ".:'`pear config-get php_dir`'"' | sudo tee -a /Library/Server/Web/Config/php/local.ini</code>
 
-Testez la commande phpcs de la manière suivante avec un fichier PHP comportant des erreurs évidentes :
+Testez la commande <code># phpcs</code> de la manière suivante avec un fichier PHP comportant des erreurs évidentes :
 ```
 # phpcs --standard=SYMFONY2 monFichier.php
 ```
