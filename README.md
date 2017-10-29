@@ -193,3 +193,6 @@ Vous devriez voir une ligne similaire à : <code>with Xdebug v2.5.5, Copyright (
 >**Note :**
 >Il est possible que cette dernière ligne n’apparaisse pas directement après l’installation et ceci malgré la création du fichier de configuration cité précédemment. 
 >Dans ce cas, un simple rechargement de la configuration du profil de l’utilisateur par la commande <code># source .bash_profile</code> devrait arranger tout ça.
+
+----------
+## Configuration de PhpStorm pour un projet Symfony
