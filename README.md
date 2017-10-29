@@ -166,4 +166,30 @@ Vérification que tout a bien été installé correctement :
 
 ### Installation de Xdebug
 >**Note :**
->Installez préalablement l'application Xcode sur votre Mac depuis l'App Store.
+>Il est nécéssaire d'installer au préalable l'application **Xcode** sur votre Mac depuis l'App Store.
+
+Nous allons installer Xdebug en utilisant **Homebrew** qui est un logiciel de gestion de paquets pour Mac OS nous permettant ainsi d'installer des outils qu'Apple n'a pas installé sur son système.
+
+Lancez donc la commande d'installation suivante :
+```
+// Installer Homebrew
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+```
+Puis lancez la commande suivante, en remplaçant <code>< php-version ></code> par la version de votre PHP installée sur votre Mac, pour installer Xdebug :
+```
+// Installer Xdebug
+# brew install homebrew/php/<php-version>-xdebug
+```
+L’extension Xdebug est par défaut automatiquement activée après son installation.
+Une configuration supplémentaire de l'extension a dû être faite en ajoutant un fichier .ini personnalisé à l’emplacement suivant : <code>/usr/local/etc/php/< php-version >/conf.d/</code>
+
+Vérifiez que Xdebug a été installé en utilisant la commande : 
+```
+// Vérifier l'installation de xdebug
+# php -v
+```
+Vous devriez voir une ligne similaire à : <code>with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans</code> confirmant ainsi sa parfaite installation.
+
+>**Note :**
+>Il est possible que cette dernière ligne n’apparaisse pas directement après l’installation et ceci malgré la création du fichier de configuration cité précédemment. 
+>Dans ce cas, un simple rechargement de la configuration du profil de l’utilisateur par la commande <code># source .bash_profile</code> devrait arranger tout ça.
