@@ -196,3 +196,26 @@ Vous devriez voir une ligne similaire à : <code>with Xdebug v2.5.5, Copyright (
 
 ----------
 ## Configuration de PhpStorm pour un projet Symfony
+
+### Configurer la version de PHP utilisée
+### Paramétrer le Coding Style
+### Configurer PHP CodeSniffer
+### Configurer PHP MessDetector
+### Configurer Xdebug
+Depuis sa version 10, PhpStorm autorise le mode "Zero Configuration" pour Xdebug.
+Il vous suffit donc de cliquer sur le bouton  "Démarrer écoute" pour démarrer l'écoute de votre script.
+
+Toutefois il possible de se rendre dans **File** / **Settings** / **Languages & Framework** / **PHP** /**DEBUG** pour pouvoir, si besoin ajuster le paramétrage de l'IDE concernant le mode DEBUG de PHP.
+
+### Installer les plugins utiles
+Rendez-vous dans **File** / **Settings** / **Plugins** et installez les plugins suivants en les recherchant depuis le bouton **Search in repository** :
+
+ - **PHP Annotation** : vous pouvez configurer de nouveau alias manuellement pour vos annotations dans **File** / **Settings** / **Languages & Framework** / **PHP** / **Annotation**.
+ - **Symfony Plugin** : ce module est à réactiver pour chaque projet Symfony depuis **File** / **Settings** / **Languages & Framework** / **PHP** / **Symfony** : **Enable Plugin for this Project**.
+ - **PHP Toolbox** : Il n'y a pas de configuration à prévoir pour ce module.
+ - **Twig Support** : normalement il a dû s'installer en même temps que Symfony Plugin. Il n'y a pas de configuration à prévoir pour ce module.
+
+Terminez par un clique sur les boutons **Apply** et **OK**.
+
+### Configuration supplémentaire
+
