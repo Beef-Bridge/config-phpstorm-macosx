@@ -82,15 +82,15 @@ Assurez-vous que la commande <code># phpcs</code> fonctionne correctement :
 # phpcs
 ```
 > **Note :** 
-En exécutant la commande <code># phpcs</code>, il se peut que les warning ci-dessous apparaissent empêchant ainsi son fonctionnement :
+En exécutant la commande <code># phpcs</code>, il se peut que les warning ci-dessous apparaissent empêchant ainsi son fonctionnement :<br>
 <code>Warning: include_once(PHP/CodeSniffer/CLI.php): failed to open stream: No such file or directory in /usr/local/bin/phpcs on line 21</code><br>
 <code>Warning: include_once(): Failed opening 'PHP/CodeSniffer/CLI.php' for inclusion (include_path='.:') in /usr/local/bin/phpcs on line 21</code><br>
 <code>Fatal error: Class 'PHP_CodeSniffer_CLI' not found in /usr/local/bin/phpcs on line 24</code><br>
-<br>Pour les résoudre sur **MacOS 10.11** exécutez les instructions suivantes :
+<br>Pour les résoudre sur **MacOS 10.11** exécutez les instructions suivantes :<br>
  <code># sudo mkdir -p /Library/Server/Web/Config/php</code><br>
  <code># sudo touch /Library/Server/Web/Config/php/local.ini</code><br>
  <code># echo 'include_path = ".:'`pear config-get php_dir`'"' | sudo tee -a /Library/Server/Web/Config/php/local.ini</code><br>
- <br>Pour les résoudre sur **MacOS 10.13** exécutez l'instruction suivante :
+ <br>Pour les résoudre sur **MacOS 10.13** exécutez l'instruction suivante :<br>
  <code># sudo touch /etc/php.ini</code><br>
  <code># sudo nano /etc/php.ini</code><br>
  <code>inlude_path = "/Users/duduc/pear/share/pear/"</code><br>
